@@ -2,7 +2,7 @@
 ## Makefile generated for component 'h2'. 
 ## 
 ## Makefile     : h2.mk
-## Generated on : Sun Sep 29 18:38:30 2024
+## Generated on : Sun Sep 29 23:10:04 2024
 ## Final product: $(RELATIVE_PATH_TO_ANCHOR)\h2.exe
 ## Product type : executable
 ## 
@@ -183,7 +183,7 @@ DEFINES = $(DEFINES_BUILD_ARGS) $(DEFINES_CUSTOM) $(DEFINES_OPTS) $(DEFINES_STAN
 ## SOURCE FILES
 ###########################################################################
 
-SRCS = $(START_DIR)\h2_ert_rtw\h2.c
+SRCS = $(START_DIR)\h2_ert_rtw\h2.c $(START_DIR)\h2_ert_rtw\h2_data.c
 
 MAIN_SRC = $(START_DIR)\h2_ert_rtw\ert_main.c
 
@@ -193,7 +193,7 @@ ALL_SRCS = $(SRCS) $(MAIN_SRC)
 ## OBJECTS
 ###########################################################################
 
-OBJS = h2.obj
+OBJS = h2.obj h2_data.obj
 
 MAIN_OBJ = ert_main.obj
 
@@ -420,6 +420,10 @@ ert_main.obj : "$(START_DIR)\h2_ert_rtw\ert_main.c"
 
 h2.obj : "$(START_DIR)\h2_ert_rtw\h2.c"
 	$(CC) $(CFLAGS) -Fo"$@" "$(START_DIR)\h2_ert_rtw\h2.c"
+
+
+h2_data.obj : "$(START_DIR)\h2_ert_rtw\h2_data.c"
+	$(CC) $(CFLAGS) -Fo"$@" "$(START_DIR)\h2_ert_rtw\h2_data.c"
 
 
 ###########################################################################
